@@ -1,0 +1,206 @@
+footer {
+  background-color: $bgcolor5;
+  padding: 150px 0 70px;
+  width: 100%;
+  * {
+    color: $color4;
+    font-size: $font-m;
+  }
+
+  @include below(600px) {
+    padding-top: 56px;
+  }
+
+  .wrapper {
+    display: flex;
+    @include below(1000px) {
+      flex-direction: column-reverse;
+    }
+    @include below($l) {
+      flex-direction: column;
+    }
+  }
+
+  #footer-lists {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 370px;
+
+    @include below(600px) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      @include below(600px) {
+        margin-bottom: 73px;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      * {
+        line-height: 27px;
+      }
+      li {
+        &:first-child {
+          @include below(600px) {
+            margin-bottom: 23px;
+            width: 100%;
+          }
+          * {
+            font-size: $font-xl;
+            font-weight: bold;
+          }
+        }
+
+        @include below(600px) {
+          margin-bottom: 11px;
+          width: 50%;
+        }
+
+        .logo {
+          filter: invert(1);
+          width: 58px;
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  #footer-side {
+    position: relative;
+    display: block;
+    padding-left: 123px;
+
+    @include below(1000px) {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 0px;
+      width: 100%;
+      justify-content: space-between;
+
+      @include below($l) {
+        flex-direction: row;
+      }
+    }
+
+    .footer-side-block {
+      @include below($l) {
+        margin-top: 111px;
+        &:nth-of-type(1) {
+          display: none;
+        }
+      }
+
+      h3 {
+        font-size: $font-xl;
+        width: 290px;
+      }
+      a,
+      button,
+      input {
+        background-color: $bgcolor1;
+        height: 47px;
+        width: 150px;
+        border: none;
+        display: inline-block;
+        margin: 35px 0 62px 30px;
+        border-radius: 24px;
+        color: $color1;
+        font-weight: bold;
+        font-size: $font-xs;
+
+        @include below(1000px) {
+          margin: 35px 0 62px 10px;
+        }
+
+        &.apple-store {
+          background-image: url('../img/icons/google play.svg');
+        }
+        &.google-play {
+          background-image: url('../img/icons/google play.svg');
+        }
+      }
+      input {
+        width: 330px;
+        background-color: $color2;
+        padding-left: 20px;
+
+        @include below(600px) {
+          width: 270px;
+        }
+      }
+      button {
+        position: absolute;
+        right: 10px;
+        bottom: 4px;
+        z-index: 9999;
+        cursor: pointer;
+        height: 39px;
+        width: 100px;
+
+        @include below(1000px) {
+          right: auto;
+          left: 226px;
+          bottom: 7px;
+        }
+        @include below($l) {
+          right: auto;
+          bottom: 4px;
+        }
+        @include below(600px) {
+          left: 167px;
+          bottom: 4px;
+        }
+      }
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/icons/facebook.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:nth-of-type(2) {
+      background-image: url('../img/icons/instagram.svg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('../img/icons/linkedin.svg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('../img/icons/twitter.svg');
+    }
+    &:nth-of-type(5) {
+      background-image: url('../img/icons/youtube.svg');
+    }
+  }
+}
+
+.footer-icons-big {
+  @include below(600px) {
+    display: none;
+  }
+}
+.footer-icons-small {
+  display: none;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 72px;
+
+  @include below(600px) {
+    display: flex;
+  }
+
+  a {
+    display: block;
+  }
+}

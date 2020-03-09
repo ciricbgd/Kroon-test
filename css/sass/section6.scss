@@ -1,0 +1,129 @@
+#section6 {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 115px;
+
+  #cards-holder {
+    margin-top: 28px;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+
+    .cards {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      position: relative;
+      top: 0;
+      left: 0%;
+
+      .card {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+
+        @include below($l) {
+          width: 500px;
+          flex-basis: auto;
+          max-width: 100%;
+        }
+
+        &:nth-child(odd) {
+          padding-right: 62.5px;
+        }
+        &:nth-child(even) {
+          padding-left: 62.5px;
+        }
+
+        h2 {
+          font-size: $font-xxlplus;
+          mark {
+            color: $bgcolor3;
+            background-color: transparent;
+          }
+        }
+        p {
+          font-size: $font-m;
+          margin-top: 11px;
+        }
+      }
+    }
+  }
+}
+
+#section6-icons {
+  margin: 82px 0 0 0;
+
+  @include below($l) {
+    display: none;
+  }
+
+  .icon-holder {
+    display: inline-block;
+
+    .line-left,
+    .line-right {
+      display: inline-block;
+      width: 104px;
+      width: 0px;
+      height: 7px;
+      border-top: 1px solid $bgcolor5;
+    }
+    .icon {
+      width: 53px;
+      height: 53px;
+      background-color: $bgcolor2;
+      display: inline-block;
+      border-radius: 50%;
+      font-weight: bold;
+      text-align: center;
+      line-height: 53px;
+
+      &[data-icon-active='true'] {
+        background-color: $bgcolor3 !important;
+      }
+    }
+  }
+}
+
+#more-info {
+  background-color: $bgcolor2;
+  border-radius: 38px;
+  position: relative;
+  padding: 24px;
+  margin-top: 200px;
+
+  #more-info-button {
+    width: 53px;
+    height: 53px;
+    background-color: $bgcolor3;
+    color: $color4;
+    border-radius: 50%;
+    text-align: center;
+    font-size: $font-xxl;
+
+    background-size: 30% 30%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 99;
+
+    background-image: url('../img/icons/next.svg');
+
+    cursor: pointer;
+  }
+
+  h3 {
+    font-size: $font-l;
+    font-weight: normal;
+  }
+
+  #more-info-text {
+    font-size: $font-xs;
+    line-height: 24px;
+    margin: 42px 0 130px 0;
+    display: none;
+  }
+}

@@ -1,0 +1,47 @@
+.icon {
+  background-repeat: no-repeat;
+  background-attachment: center;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  display: block;
+  cursor: pointer;
+}
+
+.logo {
+  background-image: url('../img/icons/logo.svg');
+  float: left;
+  width: 37px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.search {
+  background-image: url('../img/icons/Shape.svg');
+}
+
+.cart {
+  background-image: url('../img/icons/Group 72.svg');
+}
+
+.hamburger {
+  background-image: url('../img/icons/Group.svg');
+}
+
+#nav {
+  display: block;
+  margin: 20px 0 50px 0;
+
+  nav {
+    float: right;
+    display: flex;
+
+    .icon {
+      width: 17px;
+      height: 17px;
+      margin-left: 10px;
+    }
+  }
+}

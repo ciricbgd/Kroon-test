@@ -1,0 +1,94 @@
+@import './vars';
+@import './nav';
+@import './section1';
+@import './section2';
+@import './section3';
+@import './section4';
+@import './section5';
+@import './section6';
+@import './footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  font-family: $font1;
+  color: $color1;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $bgcolor1;
+  font-size: $font-s;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Inline-block
+.inline-block {
+  display: inline-block;
+}
+
+//Clickable stuff
+.clickable {
+  cursor: pointer;
+}
+
+//Floats
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear-after {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+//Headers
+// h1,
+// h2,
+// h3,
+// h3,
+// h5,
+// h6 {
+
+// }
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+
+  @include below($laptop) {
+    width: 100%;
+    padding: 0px 30px 0px 30px;
+  }
+}
+
+.section-name {
+  color: $color2;
+}

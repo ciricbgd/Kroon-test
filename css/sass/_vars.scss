@@ -1,0 +1,85 @@
+// -------- Colors -----------------------------------------------------------
+
+$color1: black;
+$color2: #b7b4b7;
+$color3: #9dc0d6;
+$color4: white;
+
+$bgcolor1: white;
+$bgcolor2: #f7f7f7;
+$bgcolor3: #9dc0d6;
+$bgcolor4: #d55650;
+$bgcolor5: black;
+$bgcolor6: #dfdfdf;
+$bgcolor7: #f3f3f3;
+
+//!-------- Colors -----------------------------------------------------------
+
+// -------- Fonts -----------------------------------------------------------
+@font-face {
+  font-family: Gotham;
+  src: url(./fonts/Gotham-Font/Gotham-Light.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url(./fonts/Gotham-Font/Gotham-Light.otf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url(./fonts/Gotham-Font/Gotham-Bold.otf);
+  font-weight: bold;
+}
+
+$font1: 'Gotham';
+
+$font-xs: 14px;
+$font-s: 16px;
+$font-m: 18px;
+$font-xl: 36px;
+$font-l: 24px;
+$font-xxl: 40px;
+$font-xxlplus: 48px;
+$font-xxlextra: 60px;
+$font-xxxl: 72px;
+
+//!-------- Fonts -----------------------------------------------------------
+
+// -------- Responsive design -----------------------------------------------------------
+
+$s: 320px;
+$m: 480px;
+$l: 768px;
+$xl: 1024px;
+$laptop: 1366px;
+
+@mixin above($size...) {
+  @if length($size) ==1 {
+    @media screen and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+  @if length($size) ==2 {
+    @media screen and (max-width: nth($size, 2) - 0.02px) and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+}
+
+@mixin below($size...) {
+  @if length($size) ==1 {
+    @media screen and (max-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+  @if length($size) ==2 {
+    @media screen and (max-width: nth($size, 2) - 0.02px) and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+#section4 {
+  padding: 0 20px 0 20px;
+
+  #section4-left {
+    float: left;
+    width: 45%;
+    @include below(1100px) {
+      width: 100%;
+    }
+    h1 {
+      font-size: $font-xxlextra;
+      line-height: 76px;
+      font-weight: bold;
+      @include below(1100px) {
+        font-size: 30px;
+        max-width: 253px;
+        line-height: normal;
+      }
+    }
+    #section4-icons {
+      margin: 82px 0 200px 0;
+
+      .icon-holder {
+        display: inline-block;
+
+        .line-left,
+        .line-right {
+          display: inline-block;
+          width: 0px;
+          height: 26px;
+          border-top: 1px solid $bgcolor5;
+        }
+        .icon {
+          width: 53px;
+          height: 53px;
+          display: inline-block;
+          border-radius: 50%;
+          background-image: url('../img/icons/cloud.svg');
+          background-size: 50% 50%;
+
+          &[data-icon-active='true'] {
+            background-color: $bgcolor3 !important;
+          }
+        }
+
+        &:nth-of-type(2) .icon {
+          background-image: url('../img/icons/melody.svg');
+        }
+        &:nth-of-type(3) .icon {
+          background-image: url('../img/icons/movies.svg');
+        }
+
+        &:nth-of-type(odd) .icon {
+          background-color: $bgcolor2;
+        }
+      }
+    }
+  }
+
+  #section4-right {
+    float: right;
+
+    @include below(1100px) {
+      float: none;
+    }
+
+    .section-product {
+      display: inline-block;
+      margin-left: 40px;
+
+      @include below(1100px) {
+        margin-left: 0;
+        margin-bottom: 110px;
+      }
+      @include below(500px) {
+        display: none;
+      }
+
+      h4 {
+        margin-bottom: 27px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .section-product-loader {
+        height: 127px !important;
+        width: 127px !important;
+
+        & path.mainline {
+          stroke-width: 5;
+          stroke: $bgcolor3;
+          stroke-linecap: round;
+        }
+
+        & path.baseline {
+          stroke-width: 5;
+          stroke: $bgcolor2;
+          stroke-linecap: round;
+          //filter: url(#custom-shadow);
+        }
+
+        .ldBar-label {
+          text-align: center;
+          width: 100%;
+          height: 100%;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          vertical-align: middle;
+          line-height: 127px;
+          font-size: $font-xxl;
+          color: $color3;
+          font-weight: bold;
+
+          &:after {
+            content: 's';
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+#section2,
+#section3 {
+  margin: 135px 0 183px 0;
+  text-align: center;
+
+  @include below($l) {
+    text-align: left;
+  }
+
+  h2 {
+    margin: 25px 0 25px 0;
+    font-weight: normal;
+    font-size: $font-xxl;
+  }
+  p {
+    width: 65%;
+    margin: 0 auto;
+    font-size: $font-m;
+
+    @include below($l) {
+      width: 100%;
+    }
+  }
+}
+
+#items {
+  padding: 0 100px 0 100px;
+
+  @include below(1162px) {
+    padding: 0px;
+  }
+
+  #pictures {
+    display: inline-block;
+    width: 366px;
+    white-space: nowrap;
+    @include below(1162px) {
+      width: 100%;
+    }
+
+    picture {
+      display: inline-block;
+      margin-right: 10px;
+
+      position: relative;
+
+      .picture-info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        padding: 30px;
+        display: none;
+
+        @include below(1162px) {
+          display: block;
+        }
+
+        white-space: normal;
+        * {
+          color: $color4;
+        }
+
+        h6 {
+          font-size: $font-xl;
+          line-height: 40px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: $font-s;
+          line-height: 22px;
+        }
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        display: none;
+      }
+
+      @include below(1162px) {
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  #item-info {
+    display: inline-block;
+    width: 50%;
+    margin: 80px 0 0 80px;
+    vertical-align: top;
+
+    @include below(1162px) {
+      display: none;
+    }
+
+    .item {
+      &.active-item {
+        button {
+          font-size: $font-xl;
+          color: $color3;
+          margin-bottom: 10px;
+        }
+
+        p {
+          display: block;
+        }
+      }
+
+      button {
+        display: block;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        font-size: $font-l;
+        font-weight: bold;
+        letter-spacing: 0.825px;
+        margin-bottom: 26px;
+      }
+      p {
+        font-size: $font-m;
+        line-height: 30px;
+        margin-bottom: 36px;
+        display: none;
+      }
+    }
+  }
+}

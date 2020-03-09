@@ -1,0 +1,140 @@
+#section5 {
+  margin-bottom: 190px;
+  width: 100%;
+  position: relative;
+
+  #slidern-next,
+  #slidern-prev {
+    width: 76px;
+    height: 76px;
+    background-color: $bgcolor3;
+    color: $color4;
+    border-radius: 50%;
+    text-align: center;
+    font-size: $font-xxl;
+
+    background-size: 30% 30%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -38px;
+    z-index: 99;
+
+    cursor: pointer;
+
+    @include below($laptop) {
+      right: 10px;
+    }
+    @include below($l) {
+      display: none;
+    }
+  }
+
+  #slidern-next {
+    background-image: url('../img/icons/next.svg');
+    top: 50px;
+  }
+  #slidern-prev {
+    background-image: url('../img/icons/prev.svg');
+    top: 140px;
+  }
+
+  #slider {
+    width: 100%;
+    height: 606px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    @include below($l) {
+      white-space: nowrap;
+    }
+
+    li {
+      width: 100%;
+      height: 100%;
+      padding: 275px 0 142px 101px;
+      background-size: cover;
+      background-position: center center;
+      display: block;
+      position: absolute;
+      top: 0;
+      border-radius: 38px;
+
+      @include below($l) {
+        width: 422px;
+        display: inline-block;
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        padding: 275px 20px 20px 20px;
+        margin-right: 20px;
+      }
+      @include below(500px) {
+        width: 100%;
+      }
+
+      * {
+        color: $color4;
+      }
+
+      &:nth-of-type(1) {
+        background-image: url('../img/pictures/Group 25.png');
+        left: 0%;
+      }
+
+      &:nth-of-type(2) {
+        background-image: url('../img/pictures/Group.png');
+        left: -100%;
+      }
+
+      &:nth-of-type(3) {
+        background-image: url('../img/pictures/Group-1.png');
+        left: -200%;
+      }
+
+      h5 {
+        font-size: $font-s;
+        font-weight: normal;
+      }
+      h4 {
+        font-size: $font-xl;
+        width: 300px;
+        @include below($l) {
+          width: auto;
+          white-space: normal;
+        }
+      }
+      h3 {
+        font-size: $font-xxlextra;
+        sup {
+          font-size: $font-l;
+          font-weight: normal;
+        }
+      }
+      button {
+        display: inline-block;
+        cursor: pointer;
+        border: none;
+        background-color: $bgcolor3;
+        color: $color4;
+        font-size: $font-xs;
+        font-weight: bold;
+        margin: 36px 15px 0 0;
+        border-radius: 21px;
+        line-height: 22px;
+        padding: 10px 56px;
+
+        @include below(500px) {
+          display: block;
+          margin: 12px 15px 0 0;
+        }
+      }
+      .slider-learn {
+        color: $color3;
+        border: 2px solid $bgcolor3;
+        background-color: transparent;
+      }
+    }
+  }
+}
